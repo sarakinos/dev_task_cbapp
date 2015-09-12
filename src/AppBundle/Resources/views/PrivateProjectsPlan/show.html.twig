@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>PrivateProjectsPlan</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ entity.user }}</td>
+            </tr>
+            <tr>
+                <th>Numberallowed</th>
+                <td>{{ entity.numberAllowed }}</td>
+            </tr>
+            <tr>
+                <th>Expirationdate</th>
+                <td>{{ entity.expirationDate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('privateprojectsplan') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('privateprojectsplan_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

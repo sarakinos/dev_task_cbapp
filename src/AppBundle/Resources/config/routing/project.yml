@@ -1,0 +1,30 @@
+project:
+    path:     /
+    defaults: { _controller: "AppBundle:Project:index" }
+
+project_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Project:show" }
+
+project_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Project:new" }
+
+project_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Project:create" }
+    requirements: { _method: post }
+
+project_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Project:edit" }
+
+project_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Project:update" }
+    requirements: { _method: post|put }
+
+project_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Project:delete" }
+    requirements: { _method: post|delete }
