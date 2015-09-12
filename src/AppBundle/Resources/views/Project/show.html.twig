@@ -2,7 +2,11 @@
 
 {% block body -%}
     <h1>Project</h1>
-
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
     <table class="record_properties">
         <tbody>
             <tr>

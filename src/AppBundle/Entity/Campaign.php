@@ -50,6 +50,13 @@ class Campaign
     private $duration;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="expiration", type="datetime")
+     */
+    private $expiration;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="active", type="boolean")
@@ -157,6 +164,28 @@ class Campaign
     public function getDuration()
     {
         return $this->duration;
+    }
+    /**
+     * Set expiration
+     *
+     * @param \DateTime $expiration
+     * @return Campaign
+     */
+    public function setExpiration($expiration)
+    {
+        $this->expiration = $expiration;
+
+        return $this;
+    }
+
+    /**
+     * Get expiration
+     *
+     * @return \DateTime 
+     */
+    public function getExpiration()
+    {
+        return $this->expiration;
     }
 
     /**
