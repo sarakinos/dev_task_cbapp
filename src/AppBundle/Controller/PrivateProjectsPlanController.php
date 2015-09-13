@@ -39,7 +39,7 @@ class PrivateProjectsPlanController extends Controller
         if ($expirationDate < new \DateTime('now')) {
             return new Response('2', 406);
         }
-
+        //In case of the user is found and the expiration date of the redeem code is valid
         $newPlan = new PrivateProjectsPlan();
         $newPlan->setUser($user);
         $newPlan->setNumberAllowed($numOfPrivateProjects);

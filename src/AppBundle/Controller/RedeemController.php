@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use AppBundle\Entity\PrivateProjectsPlan;
+
 
 /**
  * Redeem controller.
@@ -72,10 +72,7 @@ public function redeemAction(Request $request, $id)
         $redeemCode->setUserId($u_id);
         $redeemCode->setUsed(true);
         return $redeemCode;
-    }
-    //Provide private projects to user (depending on the value on campaigns table)
- 
- 
+    } 
      /* Creates a form to redeem a code by User entity by id.
      *
      * @param mixed $id The entity id
@@ -92,6 +89,4 @@ public function redeemAction(Request $request, $id)
             ->getForm()
         ;
     }
- 
-
 }
