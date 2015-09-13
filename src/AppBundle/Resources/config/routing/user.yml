@@ -29,7 +29,7 @@ user_delete:
     defaults: { _controller: "AppBundle:User:delete" }
     requirements: { _method: post|delete }
 
-user_redeem_code:
-    path:     /{id}/redeem
-    defaults: { _controller: "AppBundle:User:redeem" }
-    requirements: { _method: post }
+# user_redeem_code:
+#     path:     /{id}/redeem
+#     defaults: { _controller: "AppBundle:User:redeem" }
+#     requirements: { _method: post }

@@ -1,0 +1,4 @@
+redeem_code:
+    path:     /{id}/redeem
+    defaults: { _controller: "AppBundle:Redeem:redeem" }
+    requirements: { _method: post }
